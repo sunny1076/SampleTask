@@ -23,6 +23,88 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="92.410714285714278"/>
         </scene>
+        <!--Second View Controller-->
+        <scene sceneID="KLR-Dq-Ja7">
+            <objects>
+                <viewController storyboardIdentifier="SVC" id="SQ1-7w-fjL" customClass="SecondViewController" customModule="SampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rdg-1Y-KGe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Snh-Gi-RYU">
+                                <rect key="frame" x="22" y="425" width="374" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="cB0-F7-Gjd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                <state key="normal" title="GO BACK">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="SQ1-7w-fjL" eventType="touchUpInside" id="Ez4-Wn-p8u"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This page 'youtube.com' has been blocked .Go back to visit any other website " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lh3-Sr-oOu">
+                                <rect key="frame" x="87" y="165" width="240" height="219"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="V0i-y5-hKS"/>
+                                    <constraint firstAttribute="height" constant="219" id="h4g-wX-Qei"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TJw-bz-PCh" firstAttribute="trailing" secondItem="Snh-Gi-RYU" secondAttribute="trailing" constant="18" id="LhN-bg-7Qr"/>
+                            <constraint firstItem="Lh3-Sr-oOu" firstAttribute="centerX" secondItem="TJw-bz-PCh" secondAttribute="centerX" id="pKa-pf-lr8"/>
+                            <constraint firstItem="Snh-Gi-RYU" firstAttribute="top" secondItem="Lh3-Sr-oOu" secondAttribute="bottom" constant="41" id="qLz-Fy-De6"/>
+                            <constraint firstItem="Snh-Gi-RYU" firstAttribute="leading" secondItem="TJw-bz-PCh" secondAttribute="leading" constant="22" id="tgj-S4-hbO"/>
+                            <constraint firstItem="Lh3-Sr-oOu" firstAttribute="top" secondItem="TJw-bz-PCh" secondAttribute="top" constant="121" id="uQf-qo-SQg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TJw-bz-PCh"/>
+                    </view>
+                    <connections>
+                        <outlet property="backbtn" destination="Snh-Gi-RYU" id="2Ek-rr-ZSR"/>
+                        <outlet property="textvw" destination="Lh3-Sr-oOu" id="jEz-cX-OaO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ZZ-03-2eY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1902.8985507246377" y="91.741071428571431"/>
+        </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="rwt-nP-hdh">
+            <objects>
+                <viewController storyboardIdentifier="SEVC" id="9EO-FB-47h" customClass="SettingViewController" customModule="SampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NjU-Fu-haj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="suG-XN-HtM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="suG-XN-HtM" firstAttribute="top" secondItem="oZI-FH-Uge" secondAttribute="top" id="CsC-7D-4bm"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="suG-XN-HtM" secondAttribute="bottom" constant="-34" id="V6P-ee-Jbt"/>
+                            <constraint firstItem="suG-XN-HtM" firstAttribute="centerX" secondItem="NjU-Fu-haj" secondAttribute="centerX" id="c9S-AQ-RD4"/>
+                            <constraint firstItem="suG-XN-HtM" firstAttribute="leading" secondItem="oZI-FH-Uge" secondAttribute="leading" id="sc9-Me-fjO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oZI-FH-Uge"/>
+                    </view>
+                    <connections>
+                        <outlet property="tablevw" destination="suG-XN-HtM" id="owQ-oJ-yFe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NvI-3f-o9c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2666.666666666667" y="92.410714285714278"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Faf-q5-400">
             <objects>
